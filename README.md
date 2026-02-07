@@ -47,3 +47,91 @@ The workflow can be customized with:
 - Custom AI system prompts (currently configured for sales/course support)
 - Alternative LLM providers by swapping the Chat Model node
 - Different polling intervals for the Gmail trigger
+
+---
+
+### 2. Customer Feedback Automation With Telegram
+
+An intelligent customer feedback processing workflow that handles refund requests by analyzing form submissions, looking up customer data, assessing sentiment, and routing responses based on customer value and feedback tone.
+
+#### Features
+
+- **Form Integration**: Receives customer feedback and refund requests via webhook
+- **AI-Powered Analysis**: Uses AI to extract and analyze form data with structured output
+- **Customer Database Lookup**: Integrates with Google Sheets to verify customer information
+- **Sentiment Analysis**: Evaluates customer emotion (positive, neutral, negative, very negative)
+- **Smart Routing**: Routes responses based on multiple factors:
+  - Customer lifetime value (VIP vs regular customers)
+  - Days since purchase (warranty period enforcement)
+  - Sentiment level (escalates complaints to management)
+- **Multi-Channel Notifications**: Sends responses via Gmail and alerts team via Telegram
+
+#### Workflow Components
+
+1. **Webhook** - Receives form submissions from Tally form platform
+2. **AI Agent** - LangChain-based agent that processes form data and performs analysis
+3. **Google Gemini Chat Model** - LLM that extracts and interprets customer feedback
+4. **Get row(s) in sheet in Google Sheets** - Looks up customer data by email in customer database
+5. **Structured Output Parser** - Formats AI output into structured JSON
+6. **If (Multiple Conditions)** - Routes based on days since purchase (>7 days = out of warranty)
+7. **If1** - Routes common customers with negative sentiment
+8. **If2** - Routes VIP customers (total spent ≥ R$3000)
+9. **If3** - Routes very negative sentiment cases for escalation
+10. **Send a message (3x)** - Sends personalized email responses to customers
+11. **Send a text message (2x)** - Sends alerts to team via Telegram for follow-up
+
+#### Extracted Data Points
+
+The AI Agent analyzes and extracts:
+- **nome**: Customer name from form
+- **email**: Customer email (used as lookup key)
+- **produto_reembolso**: Product requested for refund
+- **comentario**: Customer's written comment
+- **sentimento**: Sentiment analysis (positive, neutral, negative, very_negative)
+- **cliente_encontrado**: Whether customer exists in database (true/false)
+- **nome_completo**: Full name from customer database
+- **total_gasto_cliente**: Lifetime value from database
+- **dias_desde_compra**: Days since last purchase (calculated from database)
+
+#### Routing Logic
+
+**Out of Warranty (>7 days):** Customers whose purchase is beyond the 7-day guarantee period
+- Regular customers: Automatic denial with explanation
+- VIP customers (≥R$3000 spent): Manual review escalation to finance team via Telegram
+- Very negative sentiment: High-priority escalation to management with full case details
+
+**Within Warranty (≤7 days):** Processed through standard approval workflow
+
+#### Setup Requirements
+
+- n8n instance with webhook enabled
+- Google Gemini API credentials
+- Gmail OAuth2 credentials for customer responses
+- Telegram Bot Token for team notifications
+- Google Sheets with customer database:
+  - Columns: email, nome_cliente, total_gasto_cliente, data_ultima_compra
+- Tally form connected to webhook endpoint
+
+#### How It Works
+
+1. Customer submits refund request form via Tally form webhook
+2. AI Agent receives form data and processes it
+3. Agent uses Google Sheets tool to look up customer by email
+4. Structured Output Parser formats the extracted data into JSON
+5. First If node checks if purchase is within 7-day warranty period
+6. Based on conditions (warranty status, customer value, sentiment):
+   - Regular customers get automatic response
+   - VIP customers get manual review escalation
+   - Highly negative sentiment gets management review
+7. Appropriate email response is sent to customer
+8. Team notifications are sent via Telegram with relevant details
+
+#### Customization
+
+The workflow can be customized with:
+- Warranty period threshold (currently 7 days)
+- VIP customer threshold (currently R$3000 lifetime value)
+- Sentiment classification rules
+- Custom response messages for each scenario
+- Different routing destinations (email, Slack, SMS, etc.)
+- Additional customer data fields from database

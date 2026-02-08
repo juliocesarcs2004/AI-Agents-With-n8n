@@ -6,7 +6,7 @@ AI-Agents-with-n8n is a collection of practical workflows built with n8n to crea
 
 ### 1. Customer Feedback Automation With Telegram
 
-<img width="894" height="348" alt="Customer-Feedback-Automation-With-Telegram" src="https://github.com/user-attachments/assets/7251be2b-83e3-46c3-83cb-52110032578d" />
+<img width="1652" height="631" alt="Customer-Feedback-Automation-With-Telegram" src="https://github.com/user-attachments/assets/cbca1221-7143-4999-995f-9c3687e22732" />
 
 An intelligent customer feedback processing workflow that handles refund requests by analyzing form submissions, looking up customer data, assessing sentiment, and routing responses based on customer value and feedback tone.
 

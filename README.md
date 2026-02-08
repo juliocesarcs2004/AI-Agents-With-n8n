@@ -140,3 +140,15 @@ The workflow can be customized with:
 - Different polling intervals for the Gmail trigger
 
 ---
+
+
+### 3. Agent Capital Manager
+
+<img width="1031" height="342" alt="Agent_Hashtag_Capital_Manager" src="https://github.com/user-attachments/assets/33ff2b7b-889d-4160-af7a-4f54a67c6e79" />
+
+
+### 4. Financial Agent
+
+<img width="486" height="331" alt="Financial_Agent" src="https://github.com/user-attachments/assets/526775ba-1a9e-4adf-aaff-11b6d259ef7b" />
+
+

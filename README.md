@@ -6,6 +6,8 @@ AI-Agents-with-n8n is a collection of practical workflows built with n8n to crea
 
 ### 1. AI-Powered Email Reply Automation
 
+<img width="894" height="310" alt="AI-Powered Email Reply Automation" src="https://github.com/user-attachments/assets/856f6605-3778-4664-8618-90a55fbb12ab" />
+
 An intelligent email automation workflow that autonomously reads incoming Gmail messages and generates intelligent, context-aware responses using AI.
 
 #### Features
@@ -51,6 +53,8 @@ The workflow can be customized with:
 ---
 
 ### 2. Customer Feedback Automation With Telegram
+
+<img width="894" height="348" alt="Customer-Feedback-Automation-With-Telegram" src="https://github.com/user-attachments/assets/7251be2b-83e3-46c3-83cb-52110032578d" />
 
 An intelligent customer feedback processing workflow that handles refund requests by analyzing form submissions, looking up customer data, assessing sentiment, and routing responses based on customer value and feedback tone.
 

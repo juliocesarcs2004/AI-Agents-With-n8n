@@ -141,7 +141,7 @@ The workflow can be customized with:
 
 ---
 
-### Sub-Agents Created
+### Other Agents Created
 
 #### Agent Capital Manager
 

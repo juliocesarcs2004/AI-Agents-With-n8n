@@ -1,19 +1,31 @@
-# Agent Capital Manager
+# AI Agents with n8n
 
-The Agent Capital Manager is a sophisticated workflow designed to automate and streamline the management of capital allocation across various investment opportunities. It leverages advanced algorithms to analyze market trends, risk profiles, and performance metrics to ensure optimal investment strategies. This workflow assists users in making informed decisions by providing real-time insights and recommendations.
+## Introduction
 
-## Key Features:
-- **Automated Capital Allocation**: Dynamically allocate funds to various assets based on predefined criteria and performance metrics.
-- **Market Analysis**: Integrates with real-time data sources to provide comprehensive market insights.
-- **Risk Management**: Implements risk assessment algorithms to ensure capital is allocated efficiently while minimizing exposure.
+This repository contains workflows that leverage the power of agents to automate tasks in various domains, enhancing productivity and efficiency.
 
-# Financial Agent Workflows
+## Table of Contents
 
-The Financial Agent workflows are tailored to enhance financial management and strategy execution. This encompasses a range of activities including budgeting, forecasting, and investment tracking. The workflows are built to adapt to the user's financial goals, ensuring personalized and effective financial planning. 
+1. Overview
+2. Installation
+3. Agent Capital Manager
+   
+The Agent Capital Manager workflow is designed to optimize the allocation and management of capital across various investment opportunities. This workflow employs sophisticated algorithms to analyze market trends and predict potential returns on different assets. By leveraging real-time financial data, it can dynamically adjust the capital distribution based on market conditions.  
+   
+   **Key Features:**  
+   - Automated Investment Decisions: The workflow can autonomously make investment decisions based on predefined parameters.  
+   - Risk Management: It includes risk assessment tools that evaluate the potential risks associated with each investment, ensuring a balanced portfolio.  
+   - Performance Tracking: Users can monitor the performance of their investments in real time, allowing for quick adjustments when necessary.  
+   
+4. Financial Agent  
+   
+The Financial Agent workflow provides a comprehensive trade execution and management solution. This automated agent operates in the financial markets to execute trades on behalf of the user based on predefined strategies and market signals.  
+   
+   **Key Features:**  
+   - Automated Trading: Executes trades based on specific triggers and set parameters without human intervention.  
+   - Market Analysis: The agent continuously analyzes market data to optimize trade execution timings and strategies.  
+   - User Notifications: Provides real-time alerts and updates to users regarding significant market movements or opportunities. This combination of features enables users to maximize their trading efficiency and capitalize on market opportunities quickly and effectively.
 
-## Key Features:
-- **Budgeting Tools**: Offers tools to create and manage budgets effectively, setting clear financial targets.
-- **Forecasting**: Utilizes historical data to predict future financial trends, aiding in proactive decision-making.
-- **Investment Tracking**: Monitors investments across various portfolios, providing real-time updates on performance and market changes.
+## Conclusion
 
-By incorporating these workflows, users can achieve better financial health and resource management, tailored specifically to their needs.
+With these workflows, users can harness the capabilities of automated agents to achieve superior results in their financial endeavors.
